@@ -2,7 +2,6 @@
 
 A specialized .NET tool that helps you compare variable groups across different Azure DevOps environments. This tool makes it easy to spot differences in configuration values between environments (test, acceptance, production).
 
-
 ## Features
 
 - Compare variable groups across multiple environments
@@ -20,9 +19,26 @@ A specialized .NET tool that helps you compare variable groups across different 
 
 ## Installation
 
-1. Clone the repository
-2. Change directory to AzureDevOpsLibraryComparor: `cd .\AzureDevOpsLibraryComparor\`
-3. Run `dotnet pack` and afterwards `dotnet tool install --global --add-source ./nupkg AzureDevOpsLibraryComparor`
+### Option 1: Install from NuGet
+
+1. Open a terminal.
+2. Run the following command:
+   ```
+   dotnet tool install --global AzureDevopsPipelineLibraryCompare
+   ```
+
+### Option 2: Build from Source
+
+1. Clone the repository.
+2. Change directory to AzureDevOpsLibraryComparor:
+   ```
+   cd .\AzureDevOpsLibraryComparor\
+   ```
+3. Run:
+   ```
+   dotnet pack
+   dotnet tool install --global --add-source ./nupkg AzureDevOpsLibraryComparor
+   ```
 
 ## Documentation
 
@@ -31,5 +47,4 @@ For detailed usage instructions, interactive controls, and troubleshooting, plea
 ## License
 
 This project is licensed under the MIT License - see the LICENSE file for details.
-
 

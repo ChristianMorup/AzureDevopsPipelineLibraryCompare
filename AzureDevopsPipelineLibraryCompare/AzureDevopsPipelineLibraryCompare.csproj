@@ -10,6 +10,9 @@
 	<PackageOutputPath>./nupkg</PackageOutputPath>
 	<PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageReadmeFile>README.md</PackageReadmeFile>
+    <Authors>Christian Mørup</Authors>
+    <PackageProjectUrl>https://github.com/ChristianMorup/AzureDevopsPipelineLibraryCompare</PackageProjectUrl>
+    <PackageTags>azure-devops pipeline library variable-groups comparison dotnet-tool cli</PackageTags>
   </PropertyGroup>
 
   <PropertyGroup>
