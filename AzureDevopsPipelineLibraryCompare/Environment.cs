@@ -51,9 +51,14 @@ public class Environment
 
         _serviceToPAT[baseUri] = pat;
 
+        UpdateEnvVariables();
+        _currentService = baseUri;
+    }
+
+    private static void UpdateEnvVariables()
+    {
         var serviceToPAT = JsonSerializer.Serialize(_serviceToPAT);
         System.Environment.SetEnvironmentVariable(PatKey, serviceToPAT, EnvironmentVariableTarget.User);
-        _currentService = baseUri;
     }
 
     public void RefreshAzureDevOpsPAT()
@@ -64,6 +69,12 @@ public class Environment
         while (string.IsNullOrWhiteSpace(pat))
         {
             pat = GetPAT(useFallbackMessage: true);
+        }
+
+        if (_currentService != null)
+        {
+            _serviceToPAT[_currentService] = pat;
+            UpdateEnvVariables();
         }
     }
 
